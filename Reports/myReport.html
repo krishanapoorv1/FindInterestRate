@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Functional Testing</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 13, 2024 10:12:37 am</span></a>
+<a href="#"><span class="badge badge-primary">Feb 15, 2024 11:46:35 am</span></a>
 </li>
 </ul>
 </div>
@@ -72,6 +72,8 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,31 +81,31 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">Master</a><a class="dropdown-item" href="#">Sanity</a><a class="dropdown-item" href="#">Regression</a>
+<a class="dropdown-item" href="#">Sanity</a><a class="dropdown-item" href="#">Regression</a><a class="dropdown-item" href="#">Master</a>
 </ul>
 </li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag="Sanity Master"
           device="">
           <div class="test-detail">
             <p class="name">clickOnCarLoanLink</p>
             <p class="text-sm">
-              <span>10:15:46 am</span> / <span>00:00:00:416</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:01 am</span> / <span>00:00:00:265</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">clickOnCarLoanLink</h5>
-<span class='badge badge-success'>02.13.2024 10:15:46 am</span>
-<span class='badge badge-danger'>02.13.2024 10:15:46 am</span>
-<span class='badge badge-default'>00:00:00:416</span>
+<h5 class="test-status text-fail">clickOnCarLoanLink</h5>
+<span class='badge badge-success'>02.15.2024 11:47:01 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-default'>00:00:00:265</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -121,10 +123,25 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:15:46 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:01 am</td>
         <td>
-          Test case PASSED is : clickOnCarLoanLink
+          Test case FAILED is : clickOnCarLoanLink
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:01 am</td>
+        <td>
+          Test case FAILED due to : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li[@id='car-loan']/a"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [304b7309bf1bd7d23e226fc208d777e0, findElement {using=xpath, value=//li[@id='car-loan']/a}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\2303554\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55544}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55544/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 304b7309bf1bd7d23e226fc208d777e0
         </td>
       </tr>
   </tbody>
@@ -132,25 +149,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="2"
+        <li class="test-item"  status="skip" test-id="2"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">setCarAmount</p>
             <p class="text-sm">
-              <span>10:15:50 am</span> / <span>00:00:00:526</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:02 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">setCarAmount</h5>
-<span class='badge badge-success'>02.13.2024 10:15:50 am</span>
-<span class='badge badge-danger'>02.13.2024 10:15:51 am</span>
-<span class='badge badge-default'>00:00:00:526</span>
+<h5 class="test-status text-skip">setCarAmount</h5>
+<span class='badge badge-success'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -159,19 +176,23 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\setCarAmount.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\setCarAmount.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:15:50 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
         <td>
-          Test case PASSED is : setCarAmount
+          Test case Skipped is : setCarAmount
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.CarLoanEMI.setCarAmount() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.CarLoanEMI.clickOnCarLoanLink() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -179,25 +200,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="3"
+        <li class="test-item"  status="skip" test-id="3"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">setInterestRate</p>
             <p class="text-sm">
-              <span>10:15:52 am</span> / <span>00:00:00:425</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:02 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">setInterestRate</h5>
-<span class='badge badge-success'>02.13.2024 10:15:52 am</span>
-<span class='badge badge-danger'>02.13.2024 10:15:53 am</span>
-<span class='badge badge-default'>00:00:00:425</span>
+<h5 class="test-status text-skip">setInterestRate</h5>
+<span class='badge badge-success'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -206,19 +227,23 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\setInterestRate.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\setInterestRate.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:15:52 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
         <td>
-          Test case PASSED is : setInterestRate
+          Test case Skipped is : setInterestRate
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.CarLoanEMI.setInterestRate() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.CarLoanEMI.clickOnCarLoanLink() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -226,25 +251,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="skip" test-id="4"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">setLoanTenure</p>
             <p class="text-sm">
-              <span>10:15:54 am</span> / <span>00:00:00:379</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:02 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">setLoanTenure</h5>
-<span class='badge badge-success'>02.13.2024 10:15:54 am</span>
-<span class='badge badge-danger'>02.13.2024 10:15:54 am</span>
-<span class='badge badge-default'>00:00:00:379</span>
+<h5 class="test-status text-skip">setLoanTenure</h5>
+<span class='badge badge-success'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -253,19 +278,23 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\setLoanTenure.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\setLoanTenure.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:15:54 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
         <td>
-          Test case PASSED is : setLoanTenure
+          Test case Skipped is : setLoanTenure
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.CarLoanEMI.setLoanTenure() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.CarLoanEMI.clickOnCarLoanLink() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -273,25 +302,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="5"
+        <li class="test-item"  status="skip" test-id="5"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">clickOnyear</p>
             <p class="text-sm">
-              <span>10:15:55 am</span> / <span>00:00:00:471</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:02 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">clickOnyear</h5>
-<span class='badge badge-success'>02.13.2024 10:15:55 am</span>
-<span class='badge badge-danger'>02.13.2024 10:15:55 am</span>
-<span class='badge badge-default'>00:00:00:471</span>
+<h5 class="test-status text-skip">clickOnyear</h5>
+<span class='badge badge-success'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -300,19 +329,23 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\clickOnyear.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\clickOnyear.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:15:55 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
         <td>
-          Test case PASSED is : clickOnyear
+          Test case Skipped is : clickOnyear
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.CarLoanEMI.clickOnyear() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.CarLoanEMI.clickOnCarLoanLink() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -320,25 +353,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="skip" test-id="6"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">readData</p>
             <p class="text-sm">
-              <span>10:15:56 am</span> / <span>00:00:00:312</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:02 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">readData</h5>
-<span class='badge badge-success'>02.13.2024 10:15:56 am</span>
-<span class='badge badge-danger'>02.13.2024 10:15:56 am</span>
-<span class='badge badge-default'>00:00:00:312</span>
+<h5 class="test-status text-skip">readData</h5>
+<span class='badge badge-success'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:02 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -347,19 +380,23 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\readData.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\readData.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:15:56 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
         <td>
-          Test case PASSED is : readData
+          Test case Skipped is : readData
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:02 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.CarLoanEMI.readData() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.CarLoanEMI.clickOnCarLoanLink() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -367,25 +404,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="7"
+        <li class="test-item"  status="fail" test-id="7"
           author=""
           tag="Sanity Master"
           device="">
           <div class="test-detail">
             <p class="name">calculatorsDropDownValidation</p>
             <p class="text-sm">
-              <span>10:15:56 am</span> / <span>00:00:00:339</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:12 am</span> / <span>00:00:00:192</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">calculatorsDropDownValidation</h5>
-<span class='badge badge-success'>02.13.2024 10:15:56 am</span>
-<span class='badge badge-danger'>02.13.2024 10:15:57 am</span>
-<span class='badge badge-default'>00:00:00:339</span>
+<h5 class="test-status text-fail">calculatorsDropDownValidation</h5>
+<span class='badge badge-success'>02.15.2024 11:47:12 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:12 am</span>
+<span class='badge badge-default'>00:00:00:192</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -403,10 +440,25 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:15:56 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:12 am</td>
         <td>
-          Test case PASSED is : calculatorsDropDownValidation
+          Test case FAILED is : calculatorsDropDownValidation
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:12 am</td>
+        <td>
+          Test case FAILED due to : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@id='menu-item-dropdown-2696']"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [304b7309bf1bd7d23e226fc208d777e0, findElement {using=xpath, value=//a[@id='menu-item-dropdown-2696']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\2303554\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55544}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55544/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 304b7309bf1bd7d23e226fc208d777e0
         </td>
       </tr>
   </tbody>
@@ -414,25 +466,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="8"
+        <li class="test-item"  status="fail" test-id="8"
           author=""
           tag="Sanity Master"
           device="">
           <div class="test-detail">
             <p class="name">homeLoanEmiCalculatorValidation</p>
             <p class="text-sm">
-              <span>10:16:06 am</span> / <span>00:00:00:363</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:255</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">homeLoanEmiCalculatorValidation</h5>
-<span class='badge badge-success'>02.13.2024 10:16:06 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:06 am</span>
-<span class='badge badge-default'>00:00:00:363</span>
+<h5 class="test-status text-fail">homeLoanEmiCalculatorValidation</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:255</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -450,10 +502,25 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:06 am</td>
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : homeLoanEmiCalculatorValidation
+          Test case FAILED is : homeLoanEmiCalculatorValidation
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case FAILED due to : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h3[@id='ld']"}
+  (Session info: chrome=120.0.6099.130)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [304b7309bf1bd7d23e226fc208d777e0, findElement {using=xpath, value=//h3[@id='ld']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\2303554\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55544}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55544/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 304b7309bf1bd7d23e226fc208d777e0
         </td>
       </tr>
   </tbody>
@@ -461,25 +528,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="9"
+        <li class="test-item"  status="skip" test-id="9"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateHomeValueInputfield</p>
             <p class="text-sm">
-              <span>10:16:16 am</span> / <span>00:00:00:408</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateHomeValueInputfield</h5>
-<span class='badge badge-success'>02.13.2024 10:16:16 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:17 am</span>
-<span class='badge badge-default'>00:00:00:408</span>
+<h5 class="test-status text-skip">validateHomeValueInputfield</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -488,19 +555,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateHomeValueInputfield.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateHomeValueInputfield.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:16 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateHomeValueInputfield
+          Test case Skipped is : validateHomeValueInputfield
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateHomeValueInputfield() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -508,25 +580,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="10"
+        <li class="test-item"  status="skip" test-id="10"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateDownPaymentInputFieldInPercentage</p>
             <p class="text-sm">
-              <span>10:16:21 am</span> / <span>00:00:00:363</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateDownPaymentInputFieldInPercentage</h5>
-<span class='badge badge-success'>02.13.2024 10:16:21 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:22 am</span>
-<span class='badge badge-default'>00:00:00:363</span>
+<h5 class="test-status text-skip">validateDownPaymentInputFieldInPercentage</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -535,19 +607,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateDownPaymentInputFieldInPercentage.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateDownPaymentInputFieldInPercentage.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:21 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateDownPaymentInputFieldInPercentage
+          Test case Skipped is : validateDownPaymentInputFieldInPercentage
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateDownPaymentInputFieldInPercentage() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -555,25 +632,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="11"
+        <li class="test-item"  status="skip" test-id="11"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateDownPaymentRupeesButton</p>
             <p class="text-sm">
-              <span>10:16:22 am</span> / <span>00:00:00:350</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateDownPaymentRupeesButton</h5>
-<span class='badge badge-success'>02.13.2024 10:16:22 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:23 am</span>
-<span class='badge badge-default'>00:00:00:350</span>
+<h5 class="test-status text-skip">validateDownPaymentRupeesButton</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -582,19 +659,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateDownPaymentRupeesButton.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateDownPaymentRupeesButton.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:22 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateDownPaymentRupeesButton
+          Test case Skipped is : validateDownPaymentRupeesButton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateDownPaymentRupeesButton() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -602,25 +684,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="12"
+        <li class="test-item"  status="skip" test-id="12"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateLoanInsuranceInputField</p>
             <p class="text-sm">
-              <span>10:16:27 am</span> / <span>00:00:00:323</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateLoanInsuranceInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:27 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:27 am</span>
-<span class='badge badge-default'>00:00:00:323</span>
+<h5 class="test-status text-skip">validateLoanInsuranceInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -629,19 +711,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanInsuranceInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanInsuranceInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:27 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateLoanInsuranceInputField
+          Test case Skipped is : validateLoanInsuranceInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateLoanInsuranceInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -649,25 +736,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="13"
+        <li class="test-item"  status="skip" test-id="13"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateInterestRateInputField</p>
             <p class="text-sm">
-              <span>10:16:28 am</span> / <span>00:00:00:283</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateInterestRateInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:28 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:28 am</span>
-<span class='badge badge-default'>00:00:00:283</span>
+<h5 class="test-status text-skip">validateInterestRateInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -676,19 +763,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateInterestRateInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateInterestRateInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:28 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateInterestRateInputField
+          Test case Skipped is : validateInterestRateInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateInterestRateInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -696,25 +788,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="14"
+        <li class="test-item"  status="skip" test-id="14"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateLoanTenureInputField</p>
             <p class="text-sm">
-              <span>10:16:29 am</span> / <span>00:00:00:334</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateLoanTenureInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:29 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:30 am</span>
-<span class='badge badge-default'>00:00:00:334</span>
+<h5 class="test-status text-skip">validateLoanTenureInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -723,19 +815,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanTenureInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanTenureInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:29 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateLoanTenureInputField
+          Test case Skipped is : validateLoanTenureInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateLoanTenureInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -743,25 +840,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="15"
+        <li class="test-item"  status="skip" test-id="15"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateLoanTenureMonthsButton</p>
             <p class="text-sm">
-              <span>10:16:30 am</span> / <span>00:00:00:370</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateLoanTenureMonthsButton</h5>
-<span class='badge badge-success'>02.13.2024 10:16:30 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:31 am</span>
-<span class='badge badge-default'>00:00:00:370</span>
+<h5 class="test-status text-skip">validateLoanTenureMonthsButton</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -770,19 +867,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanTenureMonthsButton.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanTenureMonthsButton.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:30 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateLoanTenureMonthsButton
+          Test case Skipped is : validateLoanTenureMonthsButton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateLoanTenureMonthsButton() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -790,25 +892,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="16"
+        <li class="test-item"  status="skip" test-id="16"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateLoanChargesInputField</p>
             <p class="text-sm">
-              <span>10:16:36 am</span> / <span>00:00:00:326</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateLoanChargesInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:36 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:36 am</span>
-<span class='badge badge-default'>00:00:00:326</span>
+<h5 class="test-status text-skip">validateLoanChargesInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -817,19 +919,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanChargesInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanChargesInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:36 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateLoanChargesInputField
+          Test case Skipped is : validateLoanChargesInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateLoanChargesInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -837,25 +944,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="17"
+        <li class="test-item"  status="skip" test-id="17"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateLoanChargesRupeesButtonElement</p>
             <p class="text-sm">
-              <span>10:16:36 am</span> / <span>00:00:00:348</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateLoanChargesRupeesButtonElement</h5>
-<span class='badge badge-success'>02.13.2024 10:16:36 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:37 am</span>
-<span class='badge badge-default'>00:00:00:348</span>
+<h5 class="test-status text-skip">validateLoanChargesRupeesButtonElement</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -864,19 +971,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanChargesRupeesButtonElement.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanChargesRupeesButtonElement.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:36 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateLoanChargesRupeesButtonElement
+          Test case Skipped is : validateLoanChargesRupeesButtonElement
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateLoanChargesRupeesButtonElement() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -884,25 +996,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="18"
+        <li class="test-item"  status="skip" test-id="18"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateLoanStartMonthAndYearField</p>
             <p class="text-sm">
-              <span>10:16:37 am</span> / <span>00:00:00:363</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateLoanStartMonthAndYearField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:37 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:37 am</span>
-<span class='badge badge-default'>00:00:00:363</span>
+<h5 class="test-status text-skip">validateLoanStartMonthAndYearField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -911,19 +1023,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanStartMonthAndYearField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanStartMonthAndYearField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:37 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateLoanStartMonthAndYearField
+          Test case Skipped is : validateLoanStartMonthAndYearField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateLoanStartMonthAndYearField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -931,25 +1048,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="19"
+        <li class="test-item"  status="skip" test-id="19"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateLoanStartMonthAndYearInputField</p>
             <p class="text-sm">
-              <span>10:16:39 am</span> / <span>00:00:00:327</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateLoanStartMonthAndYearInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:39 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:40 am</span>
-<span class='badge badge-default'>00:00:00:327</span>
+<h5 class="test-status text-skip">validateLoanStartMonthAndYearInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -958,19 +1075,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanStartMonthAndYearInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateLoanStartMonthAndYearInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:39 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateLoanStartMonthAndYearInputField
+          Test case Skipped is : validateLoanStartMonthAndYearInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateLoanStartMonthAndYearInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -978,25 +1100,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="20"
+        <li class="test-item"  status="skip" test-id="20"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateOneTimeExpensesInputField</p>
             <p class="text-sm">
-              <span>10:16:40 am</span> / <span>00:00:00:341</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateOneTimeExpensesInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:40 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:41 am</span>
-<span class='badge badge-default'>00:00:00:341</span>
+<h5 class="test-status text-skip">validateOneTimeExpensesInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1005,19 +1127,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateOneTimeExpensesInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateOneTimeExpensesInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:40 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateOneTimeExpensesInputField
+          Test case Skipped is : validateOneTimeExpensesInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateOneTimeExpensesInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1025,25 +1152,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="21"
+        <li class="test-item"  status="skip" test-id="21"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateOneTimeExpensesRupeesButton</p>
             <p class="text-sm">
-              <span>10:16:44 am</span> / <span>00:00:00:325</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateOneTimeExpensesRupeesButton</h5>
-<span class='badge badge-success'>02.13.2024 10:16:44 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:45 am</span>
-<span class='badge badge-default'>00:00:00:325</span>
+<h5 class="test-status text-skip">validateOneTimeExpensesRupeesButton</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1052,19 +1179,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateOneTimeExpensesRupeesButton.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateOneTimeExpensesRupeesButton.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:44 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateOneTimeExpensesRupeesButton
+          Test case Skipped is : validateOneTimeExpensesRupeesButton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateOneTimeExpensesRupeesButton() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1072,25 +1204,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="22"
+        <li class="test-item"  status="skip" test-id="22"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validatePropertyTaxesPerYearInputField</p>
             <p class="text-sm">
-              <span>10:16:45 am</span> / <span>00:00:00:326</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validatePropertyTaxesPerYearInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:45 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:46 am</span>
-<span class='badge badge-default'>00:00:00:326</span>
+<h5 class="test-status text-skip">validatePropertyTaxesPerYearInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1099,19 +1231,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validatePropertyTaxesPerYearInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validatePropertyTaxesPerYearInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:45 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validatePropertyTaxesPerYearInputField
+          Test case Skipped is : validatePropertyTaxesPerYearInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validatePropertyTaxesPerYearInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1119,25 +1256,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="23"
+        <li class="test-item"  status="skip" test-id="23"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validatePropertyTaxesPerYearRupeesButton</p>
             <p class="text-sm">
-              <span>10:16:49 am</span> / <span>00:00:00:355</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validatePropertyTaxesPerYearRupeesButton</h5>
-<span class='badge badge-success'>02.13.2024 10:16:49 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:49 am</span>
-<span class='badge badge-default'>00:00:00:355</span>
+<h5 class="test-status text-skip">validatePropertyTaxesPerYearRupeesButton</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1146,19 +1283,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validatePropertyTaxesPerYearRupeesButton.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validatePropertyTaxesPerYearRupeesButton.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:49 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validatePropertyTaxesPerYearRupeesButton
+          Test case Skipped is : validatePropertyTaxesPerYearRupeesButton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validatePropertyTaxesPerYearRupeesButton() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1166,25 +1308,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="24"
+        <li class="test-item"  status="skip" test-id="24"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateHomeInsurancePerYearInputField</p>
             <p class="text-sm">
-              <span>10:16:50 am</span> / <span>00:00:00:345</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateHomeInsurancePerYearInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:50 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:50 am</span>
-<span class='badge badge-default'>00:00:00:345</span>
+<h5 class="test-status text-skip">validateHomeInsurancePerYearInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1193,19 +1335,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateHomeInsurancePerYearInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateHomeInsurancePerYearInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:50 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateHomeInsurancePerYearInputField
+          Test case Skipped is : validateHomeInsurancePerYearInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateHomeInsurancePerYearInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1213,25 +1360,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="25"
+        <li class="test-item"  status="skip" test-id="25"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateHomeInsurancePerYearRupeesButton</p>
             <p class="text-sm">
-              <span>10:16:54 am</span> / <span>00:00:00:319</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateHomeInsurancePerYearRupeesButton</h5>
-<span class='badge badge-success'>02.13.2024 10:16:54 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:54 am</span>
-<span class='badge badge-default'>00:00:00:319</span>
+<h5 class="test-status text-skip">validateHomeInsurancePerYearRupeesButton</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1240,19 +1387,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateHomeInsurancePerYearRupeesButton.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateHomeInsurancePerYearRupeesButton.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:54 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateHomeInsurancePerYearRupeesButton
+          Test case Skipped is : validateHomeInsurancePerYearRupeesButton
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateHomeInsurancePerYearRupeesButton() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1260,25 +1412,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="26"
+        <li class="test-item"  status="skip" test-id="26"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">validateMaintenanceExpensesPerMonthInputField</p>
             <p class="text-sm">
-              <span>10:16:55 am</span> / <span>00:00:00:279</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">validateMaintenanceExpensesPerMonthInputField</h5>
-<span class='badge badge-success'>02.13.2024 10:16:55 am</span>
-<span class='badge badge-danger'>02.13.2024 10:16:55 am</span>
-<span class='badge badge-default'>00:00:00:279</span>
+<h5 class="test-status text-skip">validateMaintenanceExpensesPerMonthInputField</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:001</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1287,19 +1439,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateMaintenanceExpensesPerMonthInputField.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\validateMaintenanceExpensesPerMonthInputField.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:16:55 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : validateMaintenanceExpensesPerMonthInputField
+          Test case Skipped is : validateMaintenanceExpensesPerMonthInputField
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.validateMaintenanceExpensesPerMonthInputField() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1307,25 +1464,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="27"
+        <li class="test-item"  status="skip" test-id="27"
           author=""
           tag="Regression Master"
           device="">
           <div class="test-detail">
             <p class="name">printAllTheData</p>
             <p class="text-sm">
-              <span>10:17:10 am</span> / <span>00:00:00:356</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>11:47:45 am</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">printAllTheData</h5>
-<span class='badge badge-success'>02.13.2024 10:17:10 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:11 am</span>
-<span class='badge badge-default'>00:00:00:356</span>
+<h5 class="test-status text-skip">printAllTheData</h5>
+<span class='badge badge-success'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:45 am</span>
+<span class='badge badge-default'>00:00:00:000</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1334,19 +1491,24 @@
 <div class="m-t-15"><span class="badge badge-pill badge-default">Regression</span>
 <span class="badge badge-pill badge-default">Master</span></div>
 </div>
-</div>    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\printAllTheData.png' src="C:\Users\2303554\eclipse-workspace\Hackathon_Project 7.zip_expanded\Hackathon_Project\ScreenShots\printAllTheData.png">
-    
-    </div></div>
-<div class="detail-body mt-4">
+</div><div class="detail-body mt-4">
 <table class="table table-sm">
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:10 am</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
         <td>
-          Test case PASSED is : printAllTheData
+          Test case Skipped is : printAllTheData
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>11:47:45 am</td>
+        <td>
+          Test case Skipped due to : java.lang.Throwable: Method TestCases.HomeLoanEMI.printAllTheData() on instance TestCases.LoanTenureCalculatorUICheck@368f2016 depends on not successfully finished methods 
+[TestCases.HomeLoanEMI.homeLoanEmiCalculatorValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016
+TestCases.HomeLoanEMI.calculatorsDropDownValidation() on instance TestCases.LoanTenureCalculatorUICheck@368f2016]
         </td>
       </tr>
   </tbody>
@@ -1361,7 +1523,7 @@
           <div class="test-detail">
             <p class="name">calculatorsDropDownValidationFromHomeLoan</p>
             <p class="text-sm">
-              <span>10:17:11 am</span> / <span>00:00:00:354</span>
+              <span>11:47:46 am</span> / <span>00:00:00:281</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1370,9 +1532,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">calculatorsDropDownValidationFromHomeLoan</h5>
-<span class='badge badge-success'>02.13.2024 10:17:11 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:11 am</span>
-<span class='badge badge-default'>00:00:00:354</span>
+<span class='badge badge-success'>02.15.2024 11:47:46 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:46 am</span>
+<span class='badge badge-default'>00:00:00:281</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1391,7 +1553,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:11 am</td>
+        <td>11:47:46 am</td>
         <td>
           Test case PASSED is : calculatorsDropDownValidationFromHomeLoan
         </td>
@@ -1408,7 +1570,7 @@
           <div class="test-detail">
             <p class="name">emiCalculatorPageValidation</p>
             <p class="text-sm">
-              <span>10:17:14 am</span> / <span>00:00:00:379</span>
+              <span>11:47:48 am</span> / <span>00:00:00:343</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1417,9 +1579,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">emiCalculatorPageValidation</h5>
-<span class='badge badge-success'>02.13.2024 10:17:14 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:15 am</span>
-<span class='badge badge-default'>00:00:00:379</span>
+<span class='badge badge-success'>02.15.2024 11:47:48 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:48 am</span>
+<span class='badge badge-default'>00:00:00:343</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1438,7 +1600,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:14 am</td>
+        <td>11:47:48 am</td>
         <td>
           Test case PASSED is : emiCalculatorPageValidation
         </td>
@@ -1455,7 +1617,7 @@
           <div class="test-detail">
             <p class="name">validateEmiCalculatorLink</p>
             <p class="text-sm">
-              <span>10:17:15 am</span> / <span>00:00:00:393</span>
+              <span>11:47:48 am</span> / <span>00:00:00:283</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1464,9 +1626,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateEmiCalculatorLink</h5>
-<span class='badge badge-success'>02.13.2024 10:17:15 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:15 am</span>
-<span class='badge badge-default'>00:00:00:393</span>
+<span class='badge badge-success'>02.15.2024 11:47:48 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:48 am</span>
+<span class='badge badge-default'>00:00:00:283</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1485,7 +1647,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:15 am</td>
+        <td>11:47:48 am</td>
         <td>
           Test case PASSED is : validateEmiCalculatorLink
         </td>
@@ -1502,7 +1664,7 @@
           <div class="test-detail">
             <p class="name">verifyEmiCalculatorLoanAmountInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:15 am</span> / <span>00:00:00:371</span>
+              <span>11:47:48 am</span> / <span>00:00:00:297</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1511,9 +1673,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyEmiCalculatorLoanAmountInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:15 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:16 am</span>
-<span class='badge badge-default'>00:00:00:371</span>
+<span class='badge badge-success'>02.15.2024 11:47:48 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:49 am</span>
+<span class='badge badge-default'>00:00:00:297</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1532,7 +1694,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:15 am</td>
+        <td>11:47:48 am</td>
         <td>
           Test case PASSED is : verifyEmiCalculatorLoanAmountInputFieldPresence
         </td>
@@ -1549,7 +1711,7 @@
           <div class="test-detail">
             <p class="name">validateEmiCalculatorLoanAmountInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:17 am</span> / <span>00:00:00:400</span>
+              <span>11:47:52 am</span> / <span>00:00:00:367</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1558,9 +1720,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateEmiCalculatorLoanAmountInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:17 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:17 am</span>
-<span class='badge badge-default'>00:00:00:400</span>
+<span class='badge badge-success'>02.15.2024 11:47:52 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:52 am</span>
+<span class='badge badge-default'>00:00:00:367</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1579,7 +1741,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:17 am</td>
+        <td>11:47:52 am</td>
         <td>
           Test case PASSED is : validateEmiCalculatorLoanAmountInputFieldByPassingValue
         </td>
@@ -1596,7 +1758,7 @@
           <div class="test-detail">
             <p class="name">verifyEmiCalculatorInterestRateInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:17 am</span> / <span>00:00:00:403</span>
+              <span>11:47:52 am</span> / <span>00:00:00:377</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1605,9 +1767,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyEmiCalculatorInterestRateInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:17 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:18 am</span>
-<span class='badge badge-default'>00:00:00:403</span>
+<span class='badge badge-success'>02.15.2024 11:47:52 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:53 am</span>
+<span class='badge badge-default'>00:00:00:377</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1626,7 +1788,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:17 am</td>
+        <td>11:47:52 am</td>
         <td>
           Test case PASSED is : verifyEmiCalculatorInterestRateInputFieldPresence
         </td>
@@ -1643,7 +1805,7 @@
           <div class="test-detail">
             <p class="name">validateEmiCalculatorInterestRateInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:19 am</span> / <span>00:00:00:422</span>
+              <span>11:47:54 am</span> / <span>00:00:00:307</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1652,9 +1814,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateEmiCalculatorInterestRateInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:19 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:19 am</span>
-<span class='badge badge-default'>00:00:00:422</span>
+<span class='badge badge-success'>02.15.2024 11:47:54 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:54 am</span>
+<span class='badge badge-default'>00:00:00:307</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1673,7 +1835,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:19 am</td>
+        <td>11:47:54 am</td>
         <td>
           Test case PASSED is : validateEmiCalculatorInterestRateInputFieldByPassingValue
         </td>
@@ -1690,7 +1852,7 @@
           <div class="test-detail">
             <p class="name">verifyEmiCalculatorLoanTenureInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:19 am</span> / <span>00:00:00:428</span>
+              <span>11:47:54 am</span> / <span>00:00:00:333</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1699,9 +1861,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyEmiCalculatorLoanTenureInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:19 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:20 am</span>
-<span class='badge badge-default'>00:00:00:428</span>
+<span class='badge badge-success'>02.15.2024 11:47:54 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:55 am</span>
+<span class='badge badge-default'>00:00:00:333</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1720,7 +1882,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:19 am</td>
+        <td>11:47:55 am</td>
         <td>
           Test case PASSED is : verifyEmiCalculatorLoanTenureInputFieldPresence
         </td>
@@ -1737,7 +1899,7 @@
           <div class="test-detail">
             <p class="name">validateEmiCalculatorLoanTenureInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:21 am</span> / <span>00:00:00:406</span>
+              <span>11:47:56 am</span> / <span>00:00:00:273</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1746,9 +1908,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateEmiCalculatorLoanTenureInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:21 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:21 am</span>
-<span class='badge badge-default'>00:00:00:406</span>
+<span class='badge badge-success'>02.15.2024 11:47:56 am</span>
+<span class='badge badge-danger'>02.15.2024 11:47:56 am</span>
+<span class='badge badge-default'>00:00:00:273</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1767,7 +1929,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:21 am</td>
+        <td>11:47:56 am</td>
         <td>
           Test case PASSED is : validateEmiCalculatorLoanTenureInputFieldByPassingValue
         </td>
@@ -1784,7 +1946,7 @@
           <div class="test-detail">
             <p class="name">validateEmiCalculatorLoanTenureMonthButton</p>
             <p class="text-sm">
-              <span>10:17:25 am</span> / <span>00:00:00:386</span>
+              <span>11:48:00 am</span> / <span>00:00:00:245</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1793,9 +1955,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateEmiCalculatorLoanTenureMonthButton</h5>
-<span class='badge badge-success'>02.13.2024 10:17:25 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:26 am</span>
-<span class='badge badge-default'>00:00:00:386</span>
+<span class='badge badge-success'>02.15.2024 11:48:00 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:00 am</span>
+<span class='badge badge-default'>00:00:00:245</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1814,7 +1976,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:25 am</td>
+        <td>11:48:00 am</td>
         <td>
           Test case PASSED is : validateEmiCalculatorLoanTenureMonthButton
         </td>
@@ -1831,7 +1993,7 @@
           <div class="test-detail">
             <p class="name">verifyEmiCalculatorLoanChargesInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:26 am</span> / <span>00:00:00:300</span>
+              <span>11:48:00 am</span> / <span>00:00:00:189</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1840,9 +2002,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyEmiCalculatorLoanChargesInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:26 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:26 am</span>
-<span class='badge badge-default'>00:00:00:300</span>
+<span class='badge badge-success'>02.15.2024 11:48:00 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:00 am</span>
+<span class='badge badge-default'>00:00:00:189</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1861,7 +2023,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:26 am</td>
+        <td>11:48:00 am</td>
         <td>
           Test case PASSED is : verifyEmiCalculatorLoanChargesInputFieldPresence
         </td>
@@ -1878,7 +2040,7 @@
           <div class="test-detail">
             <p class="name">validateEmiCalculatorLoanChargesInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:27 am</span> / <span>00:00:00:418</span>
+              <span>11:48:01 am</span> / <span>00:00:00:249</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1887,9 +2049,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateEmiCalculatorLoanChargesInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:27 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:27 am</span>
-<span class='badge badge-default'>00:00:00:418</span>
+<span class='badge badge-success'>02.15.2024 11:48:01 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:02 am</span>
+<span class='badge badge-default'>00:00:00:249</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1908,7 +2070,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:27 am</td>
+        <td>11:48:01 am</td>
         <td>
           Test case PASSED is : validateEmiCalculatorLoanChargesInputFieldByPassingValue
         </td>
@@ -1925,7 +2087,7 @@
           <div class="test-detail">
             <p class="name">validateLoanAmountCalculatorLink</p>
             <p class="text-sm">
-              <span>10:17:28 am</span> / <span>00:00:00:283</span>
+              <span>11:48:02 am</span> / <span>00:00:00:234</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1934,9 +2096,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanAmountCalculatorLink</h5>
-<span class='badge badge-success'>02.13.2024 10:17:28 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:28 am</span>
-<span class='badge badge-default'>00:00:00:283</span>
+<span class='badge badge-success'>02.15.2024 11:48:02 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:02 am</span>
+<span class='badge badge-default'>00:00:00:234</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -1955,7 +2117,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:28 am</td>
+        <td>11:48:02 am</td>
         <td>
           Test case PASSED is : validateLoanAmountCalculatorLink
         </td>
@@ -1972,7 +2134,7 @@
           <div class="test-detail">
             <p class="name">verifyEmiInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:28 am</span> / <span>00:00:00:300</span>
+              <span>11:48:02 am</span> / <span>00:00:00:237</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -1981,9 +2143,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyEmiInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:28 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:28 am</span>
-<span class='badge badge-default'>00:00:00:300</span>
+<span class='badge badge-success'>02.15.2024 11:48:02 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:02 am</span>
+<span class='badge badge-default'>00:00:00:237</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2002,7 +2164,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:28 am</td>
+        <td>11:48:02 am</td>
         <td>
           Test case PASSED is : verifyEmiInputFieldPresence
         </td>
@@ -2019,7 +2181,7 @@
           <div class="test-detail">
             <p class="name">verifyEmiInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:29 am</span> / <span>00:00:00:302</span>
+              <span>11:48:03 am</span> / <span>00:00:00:276</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2028,9 +2190,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyEmiInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:29 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:30 am</span>
-<span class='badge badge-default'>00:00:00:302</span>
+<span class='badge badge-success'>02.15.2024 11:48:03 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:04 am</span>
+<span class='badge badge-default'>00:00:00:276</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2049,7 +2211,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:29 am</td>
+        <td>11:48:03 am</td>
         <td>
           Test case PASSED is : verifyEmiInputFieldByPassingValue
         </td>
@@ -2066,7 +2228,7 @@
           <div class="test-detail">
             <p class="name">verifyLoanAmountInterestRateInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:30 am</span> / <span>00:00:00:344</span>
+              <span>11:48:04 am</span> / <span>00:00:00:227</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2075,9 +2237,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyLoanAmountInterestRateInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:30 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:30 am</span>
-<span class='badge badge-default'>00:00:00:344</span>
+<span class='badge badge-success'>02.15.2024 11:48:04 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:04 am</span>
+<span class='badge badge-default'>00:00:00:227</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=43</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2096,7 +2258,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:30 am</td>
+        <td>11:48:04 am</td>
         <td>
           Test case PASSED is : verifyLoanAmountInterestRateInputFieldPresence
         </td>
@@ -2113,7 +2275,7 @@
           <div class="test-detail">
             <p class="name">validateLoanAmountInterestRateInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:31 am</span> / <span>00:00:00:273</span>
+              <span>11:48:05 am</span> / <span>00:00:00:263</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2122,9 +2284,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanAmountInterestRateInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:31 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:31 am</span>
-<span class='badge badge-default'>00:00:00:273</span>
+<span class='badge badge-success'>02.15.2024 11:48:05 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:05 am</span>
+<span class='badge badge-default'>00:00:00:263</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=44</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2143,7 +2305,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:31 am</td>
+        <td>11:48:05 am</td>
         <td>
           Test case PASSED is : validateLoanAmountInterestRateInputFieldByPassingValue
         </td>
@@ -2160,7 +2322,7 @@
           <div class="test-detail">
             <p class="name">verifyLoanAmountTenureInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:31 am</span> / <span>00:00:00:268</span>
+              <span>11:48:05 am</span> / <span>00:00:00:242</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2169,9 +2331,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyLoanAmountTenureInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:31 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:31 am</span>
-<span class='badge badge-default'>00:00:00:268</span>
+<span class='badge badge-success'>02.15.2024 11:48:05 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:05 am</span>
+<span class='badge badge-default'>00:00:00:242</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=45</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2190,7 +2352,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:31 am</td>
+        <td>11:48:05 am</td>
         <td>
           Test case PASSED is : verifyLoanAmountTenureInputFieldPresence
         </td>
@@ -2207,7 +2369,7 @@
           <div class="test-detail">
             <p class="name">validateLoanAmountTenureInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:32 am</span> / <span>00:00:00:277</span>
+              <span>11:48:06 am</span> / <span>00:00:00:355</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2216,9 +2378,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanAmountTenureInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:32 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:33 am</span>
-<span class='badge badge-default'>00:00:00:277</span>
+<span class='badge badge-success'>02.15.2024 11:48:06 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:07 am</span>
+<span class='badge badge-default'>00:00:00:355</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=46</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2237,7 +2399,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:32 am</td>
+        <td>11:48:06 am</td>
         <td>
           Test case PASSED is : validateLoanAmountTenureInputFieldByPassingValue
         </td>
@@ -2254,7 +2416,7 @@
           <div class="test-detail">
             <p class="name">validateLoanAmountLoanTenureMonthButton</p>
             <p class="text-sm">
-              <span>10:17:36 am</span> / <span>00:00:00:283</span>
+              <span>11:48:10 am</span> / <span>00:00:00:360</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2263,9 +2425,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanAmountLoanTenureMonthButton</h5>
-<span class='badge badge-success'>02.13.2024 10:17:36 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:36 am</span>
-<span class='badge badge-default'>00:00:00:283</span>
+<span class='badge badge-success'>02.15.2024 11:48:10 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:11 am</span>
+<span class='badge badge-default'>00:00:00:360</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=47</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2284,7 +2446,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:36 am</td>
+        <td>11:48:10 am</td>
         <td>
           Test case PASSED is : validateLoanAmountLoanTenureMonthButton
         </td>
@@ -2301,7 +2463,7 @@
           <div class="test-detail">
             <p class="name">verifyLoanAmountLoanChargesInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:36 am</span> / <span>00:00:00:262</span>
+              <span>11:48:11 am</span> / <span>00:00:00:244</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2310,9 +2472,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyLoanAmountLoanChargesInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:36 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:37 am</span>
-<span class='badge badge-default'>00:00:00:262</span>
+<span class='badge badge-success'>02.15.2024 11:48:11 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:11 am</span>
+<span class='badge badge-default'>00:00:00:244</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=48</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2331,7 +2493,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:36 am</td>
+        <td>11:48:11 am</td>
         <td>
           Test case PASSED is : verifyLoanAmountLoanChargesInputFieldPresence
         </td>
@@ -2348,7 +2510,7 @@
           <div class="test-detail">
             <p class="name">validateLoanAmountLoanChargesInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:38 am</span> / <span>00:00:00:381</span>
+              <span>11:48:12 am</span> / <span>00:00:00:254</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2357,9 +2519,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanAmountLoanChargesInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:38 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:38 am</span>
-<span class='badge badge-default'>00:00:00:381</span>
+<span class='badge badge-success'>02.15.2024 11:48:12 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:12 am</span>
+<span class='badge badge-default'>00:00:00:254</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=49</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2378,7 +2540,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:38 am</td>
+        <td>11:48:12 am</td>
         <td>
           Test case PASSED is : validateLoanAmountLoanChargesInputFieldByPassingValue
         </td>
@@ -2395,7 +2557,7 @@
           <div class="test-detail">
             <p class="name">validateLoanTenureCalculatorLink</p>
             <p class="text-sm">
-              <span>10:17:39 am</span> / <span>00:00:00:289</span>
+              <span>11:48:12 am</span> / <span>00:00:00:272</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2404,9 +2566,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanTenureCalculatorLink</h5>
-<span class='badge badge-success'>02.13.2024 10:17:39 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:39 am</span>
-<span class='badge badge-default'>00:00:00:289</span>
+<span class='badge badge-success'>02.15.2024 11:48:12 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:13 am</span>
+<span class='badge badge-default'>00:00:00:272</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=50</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2425,7 +2587,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:39 am</td>
+        <td>11:48:12 am</td>
         <td>
           Test case PASSED is : validateLoanTenureCalculatorLink
         </td>
@@ -2442,7 +2604,7 @@
           <div class="test-detail">
             <p class="name">verifyLoanTenureLoanAmountInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:39 am</span> / <span>00:00:00:275</span>
+              <span>11:48:13 am</span> / <span>00:00:00:256</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2451,9 +2613,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyLoanTenureLoanAmountInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:39 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:39 am</span>
-<span class='badge badge-default'>00:00:00:275</span>
+<span class='badge badge-success'>02.15.2024 11:48:13 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:13 am</span>
+<span class='badge badge-default'>00:00:00:256</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=51</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2472,7 +2634,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:39 am</td>
+        <td>11:48:13 am</td>
         <td>
           Test case PASSED is : verifyLoanTenureLoanAmountInputFieldPresence
         </td>
@@ -2489,7 +2651,7 @@
           <div class="test-detail">
             <p class="name">validateLoanTenureLoanAmountInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:40 am</span> / <span>00:00:00:345</span>
+              <span>11:48:14 am</span> / <span>00:00:00:281</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2498,9 +2660,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanTenureLoanAmountInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:40 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:41 am</span>
-<span class='badge badge-default'>00:00:00:345</span>
+<span class='badge badge-success'>02.15.2024 11:48:14 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:14 am</span>
+<span class='badge badge-default'>00:00:00:281</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=52</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2519,7 +2681,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:40 am</td>
+        <td>11:48:14 am</td>
         <td>
           Test case PASSED is : validateLoanTenureLoanAmountInputFieldByPassingValue
         </td>
@@ -2536,7 +2698,7 @@
           <div class="test-detail">
             <p class="name">verifyLoanTenureEmiInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:41 am</span> / <span>00:00:00:346</span>
+              <span>11:48:14 am</span> / <span>00:00:00:278</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2545,9 +2707,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyLoanTenureEmiInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:41 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:41 am</span>
-<span class='badge badge-default'>00:00:00:346</span>
+<span class='badge badge-success'>02.15.2024 11:48:14 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:15 am</span>
+<span class='badge badge-default'>00:00:00:278</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=53</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2566,7 +2728,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:41 am</td>
+        <td>11:48:14 am</td>
         <td>
           Test case PASSED is : verifyLoanTenureEmiInputFieldPresence
         </td>
@@ -2583,7 +2745,7 @@
           <div class="test-detail">
             <p class="name">verifyLoanTenureInterestRateInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:41 am</span> / <span>00:00:00:277</span>
+              <span>11:48:15 am</span> / <span>00:00:00:270</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2592,9 +2754,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyLoanTenureInterestRateInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:41 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:41 am</span>
-<span class='badge badge-default'>00:00:00:277</span>
+<span class='badge badge-success'>02.15.2024 11:48:15 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:15 am</span>
+<span class='badge badge-default'>00:00:00:270</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=54</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2613,7 +2775,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:41 am</td>
+        <td>11:48:15 am</td>
         <td>
           Test case PASSED is : verifyLoanTenureInterestRateInputFieldPresence
         </td>
@@ -2630,7 +2792,7 @@
           <div class="test-detail">
             <p class="name">validateLoanTenureInterestRateInputFieldByPassingValue</p>
             <p class="text-sm">
-              <span>10:17:42 am</span> / <span>00:00:00:303</span>
+              <span>11:48:16 am</span> / <span>00:00:00:276</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2639,9 +2801,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanTenureInterestRateInputFieldByPassingValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:42 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:43 am</span>
-<span class='badge badge-default'>00:00:00:303</span>
+<span class='badge badge-success'>02.15.2024 11:48:16 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:16 am</span>
+<span class='badge badge-default'>00:00:00:276</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=55</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2660,7 +2822,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:42 am</td>
+        <td>11:48:16 am</td>
         <td>
           Test case PASSED is : validateLoanTenureInterestRateInputFieldByPassingValue
         </td>
@@ -2677,7 +2839,7 @@
           <div class="test-detail">
             <p class="name">verifyLoanTenuteLoanChargesInputFieldPresence</p>
             <p class="text-sm">
-              <span>10:17:43 am</span> / <span>00:00:00:278</span>
+              <span>11:48:16 am</span> / <span>00:00:00:262</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2686,9 +2848,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">verifyLoanTenuteLoanChargesInputFieldPresence</h5>
-<span class='badge badge-success'>02.13.2024 10:17:43 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:43 am</span>
-<span class='badge badge-default'>00:00:00:278</span>
+<span class='badge badge-success'>02.15.2024 11:48:16 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:16 am</span>
+<span class='badge badge-default'>00:00:00:262</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=56</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2707,7 +2869,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:43 am</td>
+        <td>11:48:16 am</td>
         <td>
           Test case PASSED is : verifyLoanTenuteLoanChargesInputFieldPresence
         </td>
@@ -2724,7 +2886,7 @@
           <div class="test-detail">
             <p class="name">validateLoanTenureLoanChargesInputFieldByValue</p>
             <p class="text-sm">
-              <span>10:17:44 am</span> / <span>00:00:00:349</span>
+              <span>11:48:18 am</span> / <span>00:00:00:434</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -2733,9 +2895,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">validateLoanTenureLoanChargesInputFieldByValue</h5>
-<span class='badge badge-success'>02.13.2024 10:17:44 am</span>
-<span class='badge badge-danger'>02.13.2024 10:17:44 am</span>
-<span class='badge badge-default'>00:00:00:349</span>
+<span class='badge badge-success'>02.15.2024 11:48:18 am</span>
+<span class='badge badge-danger'>02.15.2024 11:48:18 am</span>
+<span class='badge badge-default'>00:00:00:434</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=57</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -2754,7 +2916,7 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:17:44 am</td>
+        <td>11:48:18 am</td>
         <td>
           Test case PASSED is : validateLoanTenureLoanChargesInputFieldByValue
         </td>
@@ -2784,15 +2946,17 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>57</span>
+<span class='badge log pass-bg'>5</span>
+<span class='badge log badge-danger'>3</span>
 </span>
-<p class="name">Master</p>
-<p class="duration text-sm">57 tests</p>
+<p class="name">Sanity</p>
+<p class="duration text-sm">8 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>Master</h4>
-<span status="pass" class='badge log pass-bg'>57 passed</span>
+<h4>Sanity</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -2803,401 +2967,429 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:46 am</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:47:01 am</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>clickOnCarLoanLink</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:50 am</td>
-<td>
-<a href="#" class="linked" test-id='2' id='2'>setCarAmount</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:52 am</td>
-<td>
-<a href="#" class="linked" test-id='3' id='3'>setInterestRate</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:54 am</td>
-<td>
-<a href="#" class="linked" test-id='4' id='4'>setLoanTenure</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:55 am</td>
-<td>
-<a href="#" class="linked" test-id='5' id='5'>clickOnyear</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:56 am</td>
-<td>
-<a href="#" class="linked" test-id='6' id='6'>readData</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:56 am</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:47:12 am</td>
 <td>
 <a href="#" class="linked" test-id='7' id='7'>calculatorsDropDownValidation</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:06 am</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='8' id='8'>homeLoanEmiCalculatorValidation</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:16 am</td>
-<td>
-<a href="#" class="linked" test-id='9' id='9'>validateHomeValueInputfield</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:21 am</td>
-<td>
-<a href="#" class="linked" test-id='10' id='10'>validateDownPaymentInputFieldInPercentage</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:22 am</td>
-<td>
-<a href="#" class="linked" test-id='11' id='11'>validateDownPaymentRupeesButton</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:27 am</td>
-<td>
-<a href="#" class="linked" test-id='12' id='12'>validateLoanInsuranceInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:28 am</td>
-<td>
-<a href="#" class="linked" test-id='13' id='13'>validateInterestRateInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:29 am</td>
-<td>
-<a href="#" class="linked" test-id='14' id='14'>validateLoanTenureInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:30 am</td>
-<td>
-<a href="#" class="linked" test-id='15' id='15'>validateLoanTenureMonthsButton</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:36 am</td>
-<td>
-<a href="#" class="linked" test-id='16' id='16'>validateLoanChargesInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:36 am</td>
-<td>
-<a href="#" class="linked" test-id='17' id='17'>validateLoanChargesRupeesButtonElement</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:37 am</td>
-<td>
-<a href="#" class="linked" test-id='18' id='18'>validateLoanStartMonthAndYearField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:39 am</td>
-<td>
-<a href="#" class="linked" test-id='19' id='19'>validateLoanStartMonthAndYearInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:40 am</td>
-<td>
-<a href="#" class="linked" test-id='20' id='20'>validateOneTimeExpensesInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:44 am</td>
-<td>
-<a href="#" class="linked" test-id='21' id='21'>validateOneTimeExpensesRupeesButton</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:45 am</td>
-<td>
-<a href="#" class="linked" test-id='22' id='22'>validatePropertyTaxesPerYearInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:49 am</td>
-<td>
-<a href="#" class="linked" test-id='23' id='23'>validatePropertyTaxesPerYearRupeesButton</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:50 am</td>
-<td>
-<a href="#" class="linked" test-id='24' id='24'>validateHomeInsurancePerYearInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:54 am</td>
-<td>
-<a href="#" class="linked" test-id='25' id='25'>validateHomeInsurancePerYearRupeesButton</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:55 am</td>
-<td>
-<a href="#" class="linked" test-id='26' id='26'>validateMaintenanceExpensesPerMonthInputField</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:10 am</td>
-<td>
-<a href="#" class="linked" test-id='27' id='27'>printAllTheData</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:11 am</td>
+<td>11:47:46 am</td>
 <td>
 <a href="#" class="linked" test-id='28' id='28'>calculatorsDropDownValidationFromHomeLoan</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:14 am</td>
+<td>11:47:48 am</td>
 <td>
 <a href="#" class="linked" test-id='29' id='29'>emiCalculatorPageValidation</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:15 am</td>
+<td>11:47:48 am</td>
 <td>
 <a href="#" class="linked" test-id='30' id='30'>validateEmiCalculatorLink</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:15 am</td>
-<td>
-<a href="#" class="linked" test-id='31' id='31'>verifyEmiCalculatorLoanAmountInputFieldPresence</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:17 am</td>
-<td>
-<a href="#" class="linked" test-id='32' id='32'>validateEmiCalculatorLoanAmountInputFieldByPassingValue</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:17 am</td>
-<td>
-<a href="#" class="linked" test-id='33' id='33'>verifyEmiCalculatorInterestRateInputFieldPresence</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:19 am</td>
-<td>
-<a href="#" class="linked" test-id='34' id='34'>validateEmiCalculatorInterestRateInputFieldByPassingValue</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:19 am</td>
-<td>
-<a href="#" class="linked" test-id='35' id='35'>verifyEmiCalculatorLoanTenureInputFieldPresence</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:21 am</td>
-<td>
-<a href="#" class="linked" test-id='36' id='36'>validateEmiCalculatorLoanTenureInputFieldByPassingValue</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:25 am</td>
-<td>
-<a href="#" class="linked" test-id='37' id='37'>validateEmiCalculatorLoanTenureMonthButton</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:26 am</td>
-<td>
-<a href="#" class="linked" test-id='38' id='38'>verifyEmiCalculatorLoanChargesInputFieldPresence</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:27 am</td>
-<td>
-<a href="#" class="linked" test-id='39' id='39'>validateEmiCalculatorLoanChargesInputFieldByPassingValue</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:28 am</td>
+<td>11:48:02 am</td>
 <td>
 <a href="#" class="linked" test-id='40' id='40'>validateLoanAmountCalculatorLink</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:28 am</td>
+<td>11:48:12 am</td>
+<td>
+<a href="#" class="linked" test-id='50' id='50'>validateLoanTenureCalculatorLink</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>25</span>
+<span class='badge log badge-skip'>24</span>
+</span>
+<p class="name">Regression</p>
+<p class="duration text-sm">49 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Regression</h4>
+<span status="pass" class='badge log pass-bg'>25 passed</span>
+<span status="skip" class='badge log badge-skip'>24 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>setCarAmount</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>setInterestRate</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>setLoanTenure</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>clickOnyear</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>readData</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>validateHomeValueInputfield</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>validateDownPaymentInputFieldInPercentage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>validateDownPaymentRupeesButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>validateLoanInsuranceInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>validateInterestRateInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>validateLoanTenureInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>validateLoanTenureMonthsButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>validateLoanChargesInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>validateLoanChargesRupeesButtonElement</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>validateLoanStartMonthAndYearField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>validateLoanStartMonthAndYearInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>validateOneTimeExpensesInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>validateOneTimeExpensesRupeesButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>validatePropertyTaxesPerYearInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>validatePropertyTaxesPerYearRupeesButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>validateHomeInsurancePerYearInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>validateHomeInsurancePerYearRupeesButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>validateMaintenanceExpensesPerMonthInputField</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>printAllTheData</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:48 am</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>verifyEmiCalculatorLoanAmountInputFieldPresence</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:52 am</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>validateEmiCalculatorLoanAmountInputFieldByPassingValue</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:52 am</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>verifyEmiCalculatorInterestRateInputFieldPresence</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:54 am</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>validateEmiCalculatorInterestRateInputFieldByPassingValue</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:54 am</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>verifyEmiCalculatorLoanTenureInputFieldPresence</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:56 am</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>validateEmiCalculatorLoanTenureInputFieldByPassingValue</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:48:00 am</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>validateEmiCalculatorLoanTenureMonthButton</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:48:00 am</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>verifyEmiCalculatorLoanChargesInputFieldPresence</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:48:01 am</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>validateEmiCalculatorLoanChargesInputFieldByPassingValue</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:48:02 am</td>
 <td>
 <a href="#" class="linked" test-id='41' id='41'>verifyEmiInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:29 am</td>
+<td>11:48:03 am</td>
 <td>
 <a href="#" class="linked" test-id='42' id='42'>verifyEmiInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:30 am</td>
+<td>11:48:04 am</td>
 <td>
 <a href="#" class="linked" test-id='43' id='43'>verifyLoanAmountInterestRateInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:31 am</td>
+<td>11:48:05 am</td>
 <td>
 <a href="#" class="linked" test-id='44' id='44'>validateLoanAmountInterestRateInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:31 am</td>
+<td>11:48:05 am</td>
 <td>
 <a href="#" class="linked" test-id='45' id='45'>verifyLoanAmountTenureInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:32 am</td>
+<td>11:48:06 am</td>
 <td>
 <a href="#" class="linked" test-id='46' id='46'>validateLoanAmountTenureInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:36 am</td>
+<td>11:48:10 am</td>
 <td>
 <a href="#" class="linked" test-id='47' id='47'>validateLoanAmountLoanTenureMonthButton</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:36 am</td>
+<td>11:48:11 am</td>
 <td>
 <a href="#" class="linked" test-id='48' id='48'>verifyLoanAmountLoanChargesInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:38 am</td>
+<td>11:48:12 am</td>
 <td>
 <a href="#" class="linked" test-id='49' id='49'>validateLoanAmountLoanChargesInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:39 am</td>
-<td>
-<a href="#" class="linked" test-id='50' id='50'>validateLoanTenureCalculatorLink</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:39 am</td>
+<td>11:48:13 am</td>
 <td>
 <a href="#" class="linked" test-id='51' id='51'>verifyLoanTenureLoanAmountInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:40 am</td>
+<td>11:48:14 am</td>
 <td>
 <a href="#" class="linked" test-id='52' id='52'>validateLoanTenureLoanAmountInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:41 am</td>
+<td>11:48:14 am</td>
 <td>
 <a href="#" class="linked" test-id='53' id='53'>verifyLoanTenureEmiInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:41 am</td>
+<td>11:48:15 am</td>
 <td>
 <a href="#" class="linked" test-id='54' id='54'>verifyLoanTenureInterestRateInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:42 am</td>
+<td>11:48:16 am</td>
 <td>
 <a href="#" class="linked" test-id='55' id='55'>validateLoanTenureInterestRateInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:43 am</td>
+<td>11:48:16 am</td>
 <td>
 <a href="#" class="linked" test-id='56' id='56'>verifyLoanTenuteLoanChargesInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:44 am</td>
+<td>11:48:18 am</td>
 <td>
 <a href="#" class="linked" test-id='57' id='57'>validateLoanTenureLoanChargesInputFieldByValue</a>
 </td>
@@ -3209,15 +3401,19 @@
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>8</span>
+<span class='badge log pass-bg'>30</span>
+<span class='badge log badge-danger'>3</span>
+<span class='badge log badge-skip'>24</span>
 </span>
-<p class="name">Sanity</p>
-<p class="duration text-sm">8 tests</p>
+<p class="name">Master</p>
+<p class="duration text-sm">57 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>Sanity</h4>
-<span status="pass" class='badge log pass-bg'>8 passed</span>
+<h4>Master</h4>
+<span status="pass" class='badge log pass-bg'>30 passed</span>
+<span status="fail" class='badge log badge-danger'>3 failed</span>
+<span status="skip" class='badge log badge-skip'>24 skipped</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -3228,427 +3424,401 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:46 am</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:47:01 am</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>clickOnCarLoanLink</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:56 am</td>
-<td>
-<a href="#" class="linked" test-id='7' id='7'>calculatorsDropDownValidation</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:06 am</td>
-<td>
-<a href="#" class="linked" test-id='8' id='8'>homeLoanEmiCalculatorValidation</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:11 am</td>
-<td>
-<a href="#" class="linked" test-id='28' id='28'>calculatorsDropDownValidationFromHomeLoan</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:14 am</td>
-<td>
-<a href="#" class="linked" test-id='29' id='29'>emiCalculatorPageValidation</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:15 am</td>
-<td>
-<a href="#" class="linked" test-id='30' id='30'>validateEmiCalculatorLink</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:28 am</td>
-<td>
-<a href="#" class="linked" test-id='40' id='40'>validateLoanAmountCalculatorLink</a>
-</td>
-</tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:39 am</td>
-<td>
-<a href="#" class="linked" test-id='50' id='50'>validateLoanTenureCalculatorLink</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>49</span>
-</span>
-<p class="name">Regression</p>
-<p class="duration text-sm">49 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>Regression</h4>
-<span status="pass" class='badge log pass-bg'>49 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:50 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
 <td>
 <a href="#" class="linked" test-id='2' id='2'>setCarAmount</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:52 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
 <td>
 <a href="#" class="linked" test-id='3' id='3'>setInterestRate</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:54 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
 <td>
 <a href="#" class="linked" test-id='4' id='4'>setLoanTenure</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:55 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
 <td>
 <a href="#" class="linked" test-id='5' id='5'>clickOnyear</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:15:56 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:02 am</td>
 <td>
 <a href="#" class="linked" test-id='6' id='6'>readData</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:16 am</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:47:12 am</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>calculatorsDropDownValidation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>11:47:45 am</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>homeLoanEmiCalculatorValidation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='9' id='9'>validateHomeValueInputfield</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:21 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='10' id='10'>validateDownPaymentInputFieldInPercentage</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:22 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='11' id='11'>validateDownPaymentRupeesButton</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:27 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='12' id='12'>validateLoanInsuranceInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:28 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='13' id='13'>validateInterestRateInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:29 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='14' id='14'>validateLoanTenureInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:30 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='15' id='15'>validateLoanTenureMonthsButton</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:36 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='16' id='16'>validateLoanChargesInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:36 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='17' id='17'>validateLoanChargesRupeesButtonElement</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:37 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='18' id='18'>validateLoanStartMonthAndYearField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:39 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='19' id='19'>validateLoanStartMonthAndYearInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:40 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='20' id='20'>validateOneTimeExpensesInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:44 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='21' id='21'>validateOneTimeExpensesRupeesButton</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:45 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='22' id='22'>validatePropertyTaxesPerYearInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:49 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='23' id='23'>validatePropertyTaxesPerYearRupeesButton</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:50 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='24' id='24'>validateHomeInsurancePerYearInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:54 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='25' id='25'>validateHomeInsurancePerYearRupeesButton</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:16:55 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='26' id='26'>validateMaintenanceExpensesPerMonthInputField</a>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:10 am</td>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>11:47:45 am</td>
 <td>
 <a href="#" class="linked" test-id='27' id='27'>printAllTheData</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:15 am</td>
+<td>11:47:46 am</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>calculatorsDropDownValidationFromHomeLoan</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:48 am</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>emiCalculatorPageValidation</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:48 am</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>validateEmiCalculatorLink</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:48 am</td>
 <td>
 <a href="#" class="linked" test-id='31' id='31'>verifyEmiCalculatorLoanAmountInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:17 am</td>
+<td>11:47:52 am</td>
 <td>
 <a href="#" class="linked" test-id='32' id='32'>validateEmiCalculatorLoanAmountInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:17 am</td>
+<td>11:47:52 am</td>
 <td>
 <a href="#" class="linked" test-id='33' id='33'>verifyEmiCalculatorInterestRateInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:19 am</td>
+<td>11:47:54 am</td>
 <td>
 <a href="#" class="linked" test-id='34' id='34'>validateEmiCalculatorInterestRateInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:19 am</td>
+<td>11:47:54 am</td>
 <td>
 <a href="#" class="linked" test-id='35' id='35'>verifyEmiCalculatorLoanTenureInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:21 am</td>
+<td>11:47:56 am</td>
 <td>
 <a href="#" class="linked" test-id='36' id='36'>validateEmiCalculatorLoanTenureInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:25 am</td>
+<td>11:48:00 am</td>
 <td>
 <a href="#" class="linked" test-id='37' id='37'>validateEmiCalculatorLoanTenureMonthButton</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:26 am</td>
+<td>11:48:00 am</td>
 <td>
 <a href="#" class="linked" test-id='38' id='38'>verifyEmiCalculatorLoanChargesInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:27 am</td>
+<td>11:48:01 am</td>
 <td>
 <a href="#" class="linked" test-id='39' id='39'>validateEmiCalculatorLoanChargesInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:28 am</td>
+<td>11:48:02 am</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>validateLoanAmountCalculatorLink</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:48:02 am</td>
 <td>
 <a href="#" class="linked" test-id='41' id='41'>verifyEmiInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:29 am</td>
+<td>11:48:03 am</td>
 <td>
 <a href="#" class="linked" test-id='42' id='42'>verifyEmiInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:30 am</td>
+<td>11:48:04 am</td>
 <td>
 <a href="#" class="linked" test-id='43' id='43'>verifyLoanAmountInterestRateInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:31 am</td>
+<td>11:48:05 am</td>
 <td>
 <a href="#" class="linked" test-id='44' id='44'>validateLoanAmountInterestRateInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:31 am</td>
+<td>11:48:05 am</td>
 <td>
 <a href="#" class="linked" test-id='45' id='45'>verifyLoanAmountTenureInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:32 am</td>
+<td>11:48:06 am</td>
 <td>
 <a href="#" class="linked" test-id='46' id='46'>validateLoanAmountTenureInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:36 am</td>
+<td>11:48:10 am</td>
 <td>
 <a href="#" class="linked" test-id='47' id='47'>validateLoanAmountLoanTenureMonthButton</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:36 am</td>
+<td>11:48:11 am</td>
 <td>
 <a href="#" class="linked" test-id='48' id='48'>verifyLoanAmountLoanChargesInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:38 am</td>
+<td>11:48:12 am</td>
 <td>
 <a href="#" class="linked" test-id='49' id='49'>validateLoanAmountLoanChargesInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:39 am</td>
+<td>11:48:12 am</td>
+<td>
+<a href="#" class="linked" test-id='50' id='50'>validateLoanTenureCalculatorLink</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:48:13 am</td>
 <td>
 <a href="#" class="linked" test-id='51' id='51'>verifyLoanTenureLoanAmountInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:40 am</td>
+<td>11:48:14 am</td>
 <td>
 <a href="#" class="linked" test-id='52' id='52'>validateLoanTenureLoanAmountInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:41 am</td>
+<td>11:48:14 am</td>
 <td>
 <a href="#" class="linked" test-id='53' id='53'>verifyLoanTenureEmiInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:41 am</td>
+<td>11:48:15 am</td>
 <td>
 <a href="#" class="linked" test-id='54' id='54'>verifyLoanTenureInterestRateInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:42 am</td>
+<td>11:48:16 am</td>
 <td>
 <a href="#" class="linked" test-id='55' id='55'>validateLoanTenureInterestRateInputFieldByPassingValue</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:43 am</td>
+<td>11:48:16 am</td>
 <td>
 <a href="#" class="linked" test-id='56' id='56'>verifyLoanTenuteLoanChargesInputFieldPresence</a>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>10:17:44 am</td>
+<td>11:48:18 am</td>
 <td>
 <a href="#" class="linked" test-id='57' id='57'>validateLoanTenureLoanChargesInputFieldByValue</a>
 </td>
@@ -3670,25 +3840,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 13, 2024 10:12:37 am</h3>
+<h3>Feb 15, 2024 11:46:35 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 13, 2024 10:17:46 am</h3>
+<h3>Feb 15, 2024 11:48:20 am</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>57</h3>
+<h3>30</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>3</h3>
 </div></div>
 </div>
 </div>
@@ -3704,13 +3874,13 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>57</b> tests passed
+<div><small data-tooltip='52%'>
+<b>30</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='5%'><b>3</b> tests failed,
+<b>24</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -3727,10 +3897,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>57</b> events passed</small></div>
+<div><small data-tooltip='35%'><b>30</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='7%'><b>6</b> events failed,
+<b data-tooltip='%'>48</b> others
 </small>
 </div>
 </div>
@@ -3746,7 +3916,7 @@
 </div></div>
 <script>
 var timeline = {
-"clickOnCarLoanLink":0.416,"setCarAmount":0.526,"setInterestRate":0.425,"setLoanTenure":0.379,"clickOnyear":0.471,"readData":0.312,"calculatorsDropDownValidation":0.339,"homeLoanEmiCalculatorValidation":0.363,"validateHomeValueInputfield":0.408,"validateDownPaymentInputFieldInPercentage":0.363,"validateDownPaymentRupeesButton":0.35,"validateLoanInsuranceInputField":0.323,"validateInterestRateInputField":0.283,"validateLoanTenureInputField":0.334,"validateLoanTenureMonthsButton":0.37,"validateLoanChargesInputField":0.326,"validateLoanChargesRupeesButtonElement":0.348,"validateLoanStartMonthAndYearField":0.363,"validateLoanStartMonthAndYearInputField":0.327,"validateOneTimeExpensesInputField":0.341,"validateOneTimeExpensesRupeesButton":0.325,"validatePropertyTaxesPerYearInputField":0.326,"validatePropertyTaxesPerYearRupeesButton":0.355,"validateHomeInsurancePerYearInputField":0.345,"validateHomeInsurancePerYearRupeesButton":0.319,"validateMaintenanceExpensesPerMonthInputField":0.279,"printAllTheData":0.356,"calculatorsDropDownValidationFromHomeLoan":0.354,"emiCalculatorPageValidation":0.379,"validateEmiCalculatorLink":0.393,"verifyEmiCalculatorLoanAmountInputFieldPresence":0.371,"validateEmiCalculatorLoanAmountInputFieldByPassingValue":0.4,"verifyEmiCalculatorInterestRateInputFieldPresence":0.403,"validateEmiCalculatorInterestRateInputFieldByPassingValue":0.422,"verifyEmiCalculatorLoanTenureInputFieldPresence":0.428,"validateEmiCalculatorLoanTenureInputFieldByPassingValue":0.406,"validateEmiCalculatorLoanTenureMonthButton":0.386,"verifyEmiCalculatorLoanChargesInputFieldPresence":0.3,"validateEmiCalculatorLoanChargesInputFieldByPassingValue":0.418,"validateLoanAmountCalculatorLink":0.283,"verifyEmiInputFieldPresence":0.3,"verifyEmiInputFieldByPassingValue":0.302,"verifyLoanAmountInterestRateInputFieldPresence":0.344,"validateLoanAmountInterestRateInputFieldByPassingValue":0.273,"verifyLoanAmountTenureInputFieldPresence":0.268,"validateLoanAmountTenureInputFieldByPassingValue":0.277,"validateLoanAmountLoanTenureMonthButton":0.283,"verifyLoanAmountLoanChargesInputFieldPresence":0.262,"validateLoanAmountLoanChargesInputFieldByPassingValue":0.381,"validateLoanTenureCalculatorLink":0.289,"verifyLoanTenureLoanAmountInputFieldPresence":0.275,"validateLoanTenureLoanAmountInputFieldByPassingValue":0.345,"verifyLoanTenureEmiInputFieldPresence":0.346,"verifyLoanTenureInterestRateInputFieldPresence":0.277,"validateLoanTenureInterestRateInputFieldByPassingValue":0.303,"verifyLoanTenuteLoanChargesInputFieldPresence":0.278,"validateLoanTenureLoanChargesInputFieldByValue":0.349
+"clickOnCarLoanLink":0.265,"setCarAmount":0.001,"setInterestRate":0.001,"setLoanTenure":0.001,"clickOnyear":0,"readData":0.001,"calculatorsDropDownValidation":0.192,"homeLoanEmiCalculatorValidation":0.255,"validateHomeValueInputfield":0.001,"validateDownPaymentInputFieldInPercentage":0,"validateDownPaymentRupeesButton":0,"validateLoanInsuranceInputField":0.001,"validateInterestRateInputField":0,"validateLoanTenureInputField":0.001,"validateLoanTenureMonthsButton":0,"validateLoanChargesInputField":0.001,"validateLoanChargesRupeesButtonElement":0,"validateLoanStartMonthAndYearField":0.001,"validateLoanStartMonthAndYearInputField":0,"validateOneTimeExpensesInputField":0.001,"validateOneTimeExpensesRupeesButton":0,"validatePropertyTaxesPerYearInputField":0,"validatePropertyTaxesPerYearRupeesButton":0.001,"validateHomeInsurancePerYearInputField":0.001,"validateHomeInsurancePerYearRupeesButton":0,"validateMaintenanceExpensesPerMonthInputField":0.001,"printAllTheData":0,"calculatorsDropDownValidationFromHomeLoan":0.281,"emiCalculatorPageValidation":0.343,"validateEmiCalculatorLink":0.283,"verifyEmiCalculatorLoanAmountInputFieldPresence":0.297,"validateEmiCalculatorLoanAmountInputFieldByPassingValue":0.367,"verifyEmiCalculatorInterestRateInputFieldPresence":0.377,"validateEmiCalculatorInterestRateInputFieldByPassingValue":0.307,"verifyEmiCalculatorLoanTenureInputFieldPresence":0.333,"validateEmiCalculatorLoanTenureInputFieldByPassingValue":0.273,"validateEmiCalculatorLoanTenureMonthButton":0.245,"verifyEmiCalculatorLoanChargesInputFieldPresence":0.189,"validateEmiCalculatorLoanChargesInputFieldByPassingValue":0.249,"validateLoanAmountCalculatorLink":0.234,"verifyEmiInputFieldPresence":0.237,"verifyEmiInputFieldByPassingValue":0.276,"verifyLoanAmountInterestRateInputFieldPresence":0.227,"validateLoanAmountInterestRateInputFieldByPassingValue":0.263,"verifyLoanAmountTenureInputFieldPresence":0.242,"validateLoanAmountTenureInputFieldByPassingValue":0.355,"validateLoanAmountLoanTenureMonthButton":0.36,"verifyLoanAmountLoanChargesInputFieldPresence":0.244,"validateLoanAmountLoanChargesInputFieldByPassingValue":0.254,"validateLoanTenureCalculatorLink":0.272,"verifyLoanTenureLoanAmountInputFieldPresence":0.256,"validateLoanTenureLoanAmountInputFieldByPassingValue":0.281,"verifyLoanTenureEmiInputFieldPresence":0.278,"verifyLoanTenureInterestRateInputFieldPresence":0.27,"validateLoanTenureInterestRateInputFieldByPassingValue":0.276,"verifyLoanTenuteLoanChargesInputFieldPresence":0.262,"validateLoanTenureLoanChargesInputFieldByValue":0.434
 };
 </script>
 <div class="row">
@@ -3756,28 +3926,28 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>Master</td>
-<td>57</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
 <td>Sanity</td>
-<td>8</td>
+<td>5</td>
+<td>3</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>100%</td>
+<td>62.5%</td>
 </tr>
 <tr>
 <td>Regression</td>
-<td>49</td>
+<td>25</td>
 <td>0</td>
+<td>24</td>
 <td>0</td>
+<td>51.02%</td>
+</tr>
+<tr>
+<td>Master</td>
+<td>30</td>
+<td>3</td>
+<td>24</td>
 <td>0</td>
-<td>100%</td>
+<td>52.632%</td>
 </tr>
 </tbody>
 </table></div>
@@ -3822,10 +3992,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 57,
-failParent: 0,
+passParent: 30,
+failParent: 3,
 warningParent: 0,
-skipParent: 0,
+skipParent: 24,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -3839,10 +4009,10 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 57,
-failEvents: 0,
+passEvents: 30,
+failEvents: 6,
 warningEvents: 0,
-skipEvents: 0,
+skipEvents: 48,
 infoEvents: 0
 };
 </script>        </div>
