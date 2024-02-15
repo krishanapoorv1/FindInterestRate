@@ -112,7 +112,7 @@ The project uses various dependencies and libraries to facilitate automation.
  
 ## Author Information
  
-- *Harish Gandokar*
+- *Apoorva Krishana*
  
 ## Disclaimer
  
