@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="Utils.ExtentReportManager"/>
   </listeners>
-  <test thread-count="5" name="ChromeTest(failed)">
+  <test thread-count="5" name="Test(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <groups>
@@ -15,61 +15,37 @@
     <classes>
       <class name="TestCases.LoanTenureCalculatorUICheck">
         <methods>
+          <include name="validateLoanAmountCalculatorLink"/>
+          <include name="validateLoanTenureLoanAmountInputFieldByPassingValue" invocation-numbers="0"/>
+          <include name="verifyLoanTenuteLoanChargesInputFieldPresence"/>
           <include name="setUp"/>
-          <include name="validateMaintenanceExpensesPerMonthInputField"/>
+          <include name="validateLoanAmountLoanChargesInputFieldByPassingValue" invocation-numbers="0"/>
           <include name="verifyEmiCalculatorLoanAmountInputFieldPresence"/>
-          <include name="validateLoanTenureInterestRateInputFieldByPassingValue"/>
-          <include name="validateLoanChargesInputField"/>
+          <include name="validateLoanTenureInterestRateInputFieldByPassingValue" invocation-numbers="0"/>
+          <include name="validateEmiCalculatorLink"/>
+          <include name="validateEmiCalculatorLoanTenureInputFieldByPassingValue"/>
           <include name="verifyEmiCalculatorLoanChargesInputFieldPresence"/>
+          <include name="verifyLoanAmountLoanChargesInputFieldPresence"/>
           <include name="validateEmiCalculatorInterestRateInputFieldByPassingValue"/>
+          <include name="verifyEmiCalculatorLoanTenureInputFieldPresence"/>
           <include name="calculatorsDropDownValidationFromHomeLoan"/>
-          <include name="validateHomeInsurancePerYearRupeesButton"/>
           <include name="verifyLoanAmountInterestRateInputFieldPresence"/>
           <include name="verifyLoanTenureInterestRateInputFieldPresence"/>
           <include name="validateLoanAmountLoanTenureMonthButton"/>
           <include name="verifyEmiCalculatorInterestRateInputFieldPresence"/>
+          <include name="validateLoanTenureLoanChargesInputFieldByValue" invocation-numbers="0"/>
+          <include name="verifyLoanTenureLoanAmountInputFieldPresence"/>
+          <include name="validateLoanAmountTenureInputFieldByPassingValue" invocation-numbers="0"/>
           <include name="emiCalculatorPageValidation"/>
-          <include name="printAllTheData"/>
-          <include name="validatePropertyTaxesPerYearInputField"/>
           <include name="validateEmiCalculatorLoanChargesInputFieldByPassingValue"/>
           <include name="validateLoanTenureCalculatorLink"/>
-          <include name="validateOneTimeExpensesRupeesButton"/>
-          <include name="verifyEmiInputFieldPresence"/>
           <include name="validateEmiCalculatorLoanTenureMonthButton"/>
-          <include name="homeLoanEmiCalculatorValidation"/>
-          <include name="validateEmiCalculatorLoanAmountInputFieldByPassingValue"/>
-          <include name="validateLoanStartMonthAndYearField"/>
-          <include name="validateLoanAmountInterestRateInputFieldByPassingValue"/>
-          <include name="tearDown"/>
-          <include name="validateLoanAmountCalculatorLink"/>
-          <include name="validateLoanTenureLoanAmountInputFieldByPassingValue"/>
-          <include name="verifyLoanTenuteLoanChargesInputFieldPresence"/>
-          <include name="validateDownPaymentInputFieldInPercentage"/>
-          <include name="validateLoanTenureMonthsButton"/>
-          <include name="validateLoanChargesRupeesButtonElement"/>
-          <include name="validateOneTimeExpensesInputField"/>
-          <include name="validateLoanAmountLoanChargesInputFieldByPassingValue"/>
-          <include name="verifyEmiInputFieldByPassingValue"/>
-          <include name="validateHomeValueInputfield"/>
-          <include name="validateLoanInsuranceInputField"/>
-          <include name="verifyLoanTenureEmiInputFieldPresence"/>
-          <include name="validateEmiCalculatorLink"/>
-          <include name="validatePropertyTaxesPerYearRupeesButton"/>
-          <include name="validateEmiCalculatorLoanTenureInputFieldByPassingValue"/>
-          <include name="verifyLoanAmountLoanChargesInputFieldPresence"/>
-          <include name="validateLoanTenureInputField"/>
-          <include name="verifyEmiCalculatorLoanTenureInputFieldPresence"/>
-          <include name="validateHomeInsurancePerYearInputField"/>
-          <include name="validateLoanTenureLoanChargesInputFieldByValue"/>
-          <include name="verifyLoanTenureLoanAmountInputFieldPresence"/>
-          <include name="validateLoanAmountTenureInputFieldByPassingValue"/>
-          <include name="calculatorsDropDownValidation"/>
-          <include name="validateInterestRateInputField"/>
           <include name="verifyLoanAmountTenureInputFieldPresence"/>
-          <include name="validateDownPaymentRupeesButton"/>
-          <include name="validateLoanStartMonthAndYearInputField"/>
+          <include name="validateEmiCalculatorLoanAmountInputFieldByPassingValue"/>
+          <include name="validateLoanAmountInterestRateInputFieldByPassingValue" invocation-numbers="0"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.LoanTenureCalculatorUICheck -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

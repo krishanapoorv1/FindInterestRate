@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import Utils.JavaScriptManager;
+
 public class EMICalculatorPage extends BasePage{
 	
 	public EMICalculatorPage(WebDriver driver) {
@@ -11,7 +13,8 @@ public class EMICalculatorPage extends BasePage{
 		
 	}
 	
-	// Web Elemets
+	JavaScriptManager jse = new JavaScriptManager();
+	//Locators
 	
 	// Car Loan Element
 	@FindBy(xpath = "//li[@id='car-loan']/a")
@@ -46,11 +49,13 @@ public class EMICalculatorPage extends BasePage{
 	
 	// Method to click on the car loan link
 	public void clickOnCarLoanLink() {
+		jse.highlightBorder(driver, carLoanElement);
 		carLoanElement.click();
 	}
 	
 	// Method to click on the calculators drop down element
 	public void clickOnCalculatorsDropDown() {
+		jse.highlightBorder(driver, calculatorsDropDownElement);
 		calculatorsDropDownElement.click();
 	}
 	
@@ -67,12 +72,13 @@ public class EMICalculatorPage extends BasePage{
 	
 	// Method to click on the home loan emi calculator
 	public void clickOnHomeLoanEmiCalculator() {
-		
+		jse.highlightBorder(driver, homeLoanEmiCalculatorElement);
 		homeLoanEmiCalculatorElement.click();
 	}
 	
 	// Method to click on the Loan Calculator element
 	public void clickOnLoanCalculator() {
+		jse.highlightBorder(driver, loanCalculatorElement);
 		loanCalculatorElement.click();
 	}
 	
@@ -89,7 +95,7 @@ public class EMICalculatorPage extends BasePage{
 	
 	// Method to click on the Loan Amount Calculator link
 	public boolean clickOnLoanAmountCalculator() {
-		
+		jse.highlightBorder(driver, loanAmountCalculatorLinkElement);
 		loanAmountCalculatorLinkElement.click();
 		
 		String clickAction = loanAmountCalculatorLinkElement.getAttribute("class");
